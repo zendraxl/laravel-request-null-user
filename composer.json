@@ -1,0 +1,35 @@
+{
+    "name": "zendraxl/laravel-request-null-user",
+    "description": "Laravel Null Object Pattern for User fetched from Request",
+    "keywords": [
+        "laravel",
+        "null object",
+        "null user",
+        "request null user"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Drazen Vasiljevic",
+            "email": "zendraxl@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1.0",
+        "illuminate/support": "^5.7.15 | 5.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zendraxl\\LaravelRequestNullUser\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zendraxl\\LaravelRequestNullUser\\NullUserServiceProvider"
+            ]
+        }
+    }
+}
