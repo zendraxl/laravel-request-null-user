@@ -39,8 +39,8 @@ public function index(\Illuminate\Http\Request $request)
  */
 public function index()
 {
-	$owner = \Illuminate\Support\Facades\Request::owner();
-	// ...
+    $owner = \Illuminate\Support\Facades\Request::owner();
+    // ...
 }
 ```
 
@@ -54,8 +54,8 @@ public function index()
  */
 public function index()
 {
-	$owner = request()->owner();
-	// ...
+    $owner = request()->owner();
+    // ...
 }
 ```
 
@@ -107,12 +107,12 @@ use Zendraxl\LaravelRequestNullUser\Owner;
 
 class AppServiceProvider extends ServiceProvider
 {
-	public function boot(): void
-	{
-		Owner::macro('isAdmin', function () {
-		    return $this->type === 'admin';
-		});
-	}
+    public function boot(): void
+    {
+        Owner::macro('isAdmin', function () {
+            return $this->type === 'admin';
+        });
+    }
 }
 ```
 
