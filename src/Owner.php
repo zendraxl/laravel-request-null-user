@@ -22,6 +22,6 @@ class Owner
 
     public function isGuest(): bool
     {
-        return $this->user->type ?? null === 'guest';
+        return ($this->user->type ?? null) === NullUser::defaultType();
     }
 }
