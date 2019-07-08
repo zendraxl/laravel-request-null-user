@@ -19,7 +19,7 @@ class NullUserServiceProvider extends ServiceProvider
         collect(explode(',', env('ZENDRAXL_USER_TYPES')))
             ->each(function (string $type) {
                 Owner::macro('is'.Str::studly($type), function () use ($type) {
-                    return $this->user->type === $type;
+                    return $this->{NullUser::defaultProperty()} === $type;
                 });
             });
     }

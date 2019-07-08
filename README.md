@@ -133,3 +133,9 @@ $owner->isSupervisor();
 $owner->isProUser();
 $owner->isUser();
 ```
+
+If the property on the `\App\User` model is not `type` but something like `role`, then override it with env variable
+
+```
+ZENDRAXL_TYPE_PROPERTY=role
+```

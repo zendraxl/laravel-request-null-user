@@ -22,6 +22,6 @@ class Owner
 
     public function isGuest(): bool
     {
-        return ($this->user->type ?? null) === NullUser::defaultType();
+        return $this->{NullUser::defaultProperty()} === NullUser::defaultType();
     }
 }
