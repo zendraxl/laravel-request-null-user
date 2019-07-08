@@ -16,7 +16,7 @@ You can use any of these:
 
 - Dependency Injection Request object
 
-```
+```php
 /**
  * Display a listing of the resource.
  *
@@ -31,7 +31,7 @@ public function index(\Illuminate\Http\Request $request)
 
 - Laravel Facade Request object
 
-```
+```php
 /**
  * Display a listing of the resource.
  *
@@ -46,7 +46,7 @@ public function index()
 
 - Global `request()` function
 
-```
+```php
 /**
  * Display a listing of the resource.
  *
@@ -69,7 +69,7 @@ Only method defined on the `\Zendraxl\LaravelRequestNullUser\Owner` object is `i
 
 Out of the box `\Zendraxl\LaravelRequestNullUser\NullUser` comes with following public properties:
 
-```
+```php
 public $email = 'guest@example.com';
 public $name = 'Guest';
 public $type = 'guest';
@@ -77,7 +77,7 @@ public $type = 'guest';
 
 All of them can be accessed directly through the `\Zendraxl\LaravelRequestNullUser\Owner` object:
 
-```
+```php
 echo $owner->email; // guest@example.com
 echo $owner->name; // Guest
 echo $owner->type; // guest
@@ -97,7 +97,7 @@ ZENDRAXL_NULL_USER_TYPE=alien
 
 Add `isAdmin()` method to `\Zendraxl\LaravelRequestNullUser\Owner`:
 
-```
+```php
 <?php
 
 namespace App\Providers;
@@ -126,7 +126,7 @@ ZENDRAXL_USER_TYPES=admin,manager,supervisor,pro user,user
 
 then the following methods will be added to the `\Zendraxl\LaravelRequestNullUser\Owner` object:
 
-```
+```php
 $owner->isAdmin();
 $owner->isManager();
 $owner->isSupervisor();
