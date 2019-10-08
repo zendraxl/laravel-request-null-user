@@ -12,6 +12,20 @@ class NullUserServiceProvider extends ServiceProvider
     {
         $this->addOwnerMethodToRequest();
         $this->addIsTypeMethodsToOwner();
+        
+        $this->publishes([
+            package_path('config') => config_path()
+        ]);
+    }
+    
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(package_path('src/config/usernull.php'), 'usernull');
     }
 
     protected function addIsTypeMethodsToOwner(): void
